@@ -1,0 +1,41 @@
+:root {
+    --dm-social-shadow: 0 12px 20px rgba(18, 7, 7, 0.18);
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.social-link {
+    width: var(--social-size, 42px);
+    height: var(--social-size, 42px);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    background: var(--social-bg, #fff);
+    color: var(--social-color, #6b0008);
+    border: 1px solid var(--social-border, rgba(107, 0, 8, 0.15));
+    box-shadow: var(--social-shadow, var(--dm-social-shadow));
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.social-link:hover,
+.social-link:focus-visible {
+    background: var(--social-hover-bg, #e7b928);
+    color: var(--social-hover-color, #1a0f11);
+    transform: translateY(-2px);
+}
+
+.social-link--footer {
+    --social-size: 36px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .social-link {
+        transition: none;
+    }
+}

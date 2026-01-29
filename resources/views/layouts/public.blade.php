@@ -7,9 +7,9 @@
       content="Don Magnifico è un ristorante-pizzeria situato a Vasto, Chieti, con un ambiente familiare. Specializzato in piatti di pesce e pizze, offre anche piatti tipici vastesi e abruzzesi con prodotti locali. Adatto a famiglie, giovani, cene di lavoro e cene di fine scuola.">
     <meta name="keywords"
       content="ristorante, Don Magnifico, Vasto, Chieti, cucina italiana, piatti di pesce, pizze, piatti tipici, prodotti locali, ristorante familiare, cene di lavoro, cene di fine scuola, ristorante stagionale">
-    <meta name="author" content="RC Digital Solution">
+    <meta name="author" content="Roberto Celano">
     <meta name="robots" content="index, follow">
-    <title>Don Magnifico</title>
+    <title>@yield('title') - Don Magnifico</title>
     <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon/favicon-16x16.png" sizes="16x16"
       type="image/png">
@@ -44,9 +44,7 @@
       href="img/favicon/android-chrome-192x192.png">
     <link rel="icon" sizes="512x512"
       href="img/favicon/android-chrome-512x512.png">
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet">
+    <!-- Bootstrap CSS is bundled via Vite -->
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -56,7 +54,8 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />   
-    <link rel="preload" href="img/carosel/pedane.webp" as="image">
+    <link rel="preload" href="{{ asset('img/carosello/pedane.webp') }}" as="image">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     @stack('style')
   </head>
   <body>
@@ -65,8 +64,20 @@
       @yield('content')
     </main>
     @include('components.footer')
-     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-     <script>AOS.init();</script>
+    <a href="#start" id="back-to-top" class="back-to-top" aria-label="Torna a inizio pagina">
+      <i class="fas fa-chevron-up"></i>
+    </a>
     @stack('script')
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"
+      defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script>
+      window.addEventListener('load', function () {
+        if (window.AOS) {
+          AOS.init();
+        }
+      });
+    </script>
   </body>
-  </html
+</html>

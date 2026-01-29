@@ -1,0 +1,115 @@
+:root {
+    --dm-contact-bg: #fbf8f4;
+}
+
+.contact-section {
+    padding: 4.5rem 0 5rem;
+    background: linear-gradient(180deg, var(--dm-contact-bg) 0%, #ffffff 100%);
+    scroll-margin-top: 110px;
+}
+
+.contact-header {
+    margin-bottom: 2.5rem;
+}
+
+.contact-eyebrow {
+    display: inline-block;
+    font-size: 0.7rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--dm-gold);
+    margin-bottom: 0.6rem;
+}
+
+.contact-title {
+    color: var(--dm-burgundy);
+    font-size: clamp(1.8rem, 2.8vw, 2.6rem);
+    margin-bottom: 0.6rem;
+}
+
+.contact-lead {
+    color: #3c2b2f;
+    font-size: 1.05rem;
+}
+
+.contact-card {
+    background: #fff;
+    border-radius: 24px;
+    padding: 2.2rem 2.4rem;
+    border: 1px solid rgba(107, 0, 8, 0.12);
+    box-shadow: 0 22px 42px rgba(18, 7, 7, 0.12);
+    height: 100%;
+}
+
+.contact-card-title {
+    color: var(--dm-burgundy);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.contact-list {
+    display: grid;
+    gap: 1.1rem;
+}
+
+.contact-label {
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(45, 36, 38, 0.7);
+    margin-bottom: 0.3rem;
+}
+
+.contact-link {
+    color: #2d2426;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.contact-link:hover {
+    color: var(--dm-burgundy);
+    text-decoration: underline;
+}
+
+.contact-divider {
+    height: 1px;
+    background: rgba(107, 0, 8, 0.12);
+    margin: 1.8rem 0;
+}
+
+.contact-hours {
+    display: grid;
+    gap: 0.4rem;
+    font-size: 0.98rem;
+    color: #2d2426;
+}
+
+.contact-map-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-hint {
+    margin: 0;
+    color: #3c2b2f;
+    font-size: 0.95rem;
+}
+
+.contact-map {
+    border-radius: 20px;
+    border: 1px solid rgba(107, 0, 8, 0.18);
+    box-shadow: 0 18px 36px rgba(18, 7, 7, 0.18);
+}
+
+@media (max-width: 767.98px) {
+    .contact-section {
+        padding: 3.5rem 0 4rem;
+    }
+
+    .contact-card {
+        padding: 1.8rem;
+    }
+}

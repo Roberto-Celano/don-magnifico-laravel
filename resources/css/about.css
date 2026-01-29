@@ -1,0 +1,239 @@
+:root {
+    --dm-cream-soft: #f4efe9;
+}
+
+.about-us {
+    padding: 4.5rem 0;
+    background: linear-gradient(180deg, #f8f9fa 0%, var(--dm-cream-soft) 100%);
+    scroll-margin-top: 110px;
+}
+
+.about-grid {
+    row-gap: 2.5rem;
+}
+
+.about-eyebrow {
+    display: inline-block;
+    font-size: 0.7rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--dm-gold);
+    margin-bottom: 0.6rem;
+}
+
+.about-title {
+    color: var(--dm-burgundy);
+    font-size: clamp(1.8rem, 2.8vw, 2.6rem);
+    margin-bottom: 1.2rem;
+}
+
+.about-copy {
+    background: #fff;
+    border-radius: 24px;
+    padding: 2.2rem 2.4rem;
+    box-shadow: 0 20px 40px rgba(18, 7, 7, 0.12);
+}
+
+.about-copy p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #2d2426;
+    margin: 0;
+}
+
+.about-visual {
+    position: relative;
+    height: 100%;
+}
+
+.about-collage-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 1rem;
+    height: 100%;
+    min-height: 480px;
+}
+
+.about-collage-item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 18px 36px rgba(18, 7, 7, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    cursor: zoom-in;
+}
+
+.about-lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 8, 9, 0.82);
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+    z-index: 1100;
+}
+
+.about-lightbox.is-open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.about-lightbox-content {
+    position: relative;
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+}
+
+.about-lightbox-image {
+    max-width: 92vw;
+    max-height: 86vh;
+    border-radius: 18px;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    transform: scale(0.96);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.about-lightbox.is-open .about-lightbox-image {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.about-lightbox-close {
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.9);
+    color: #1a0f11;
+    font-size: 1.3rem;
+    line-height: 1;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+
+.about-lightbox-nav {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.9);
+    color: #1a0f11;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.about-lightbox-prev {
+    left: -0.8rem;
+    z-index: 999;
+}
+
+.about-lightbox-next {
+    right: -0.8rem;
+}
+
+.about-lightbox-counter {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.about-collage-badge {
+    position: absolute;
+    bottom: 1.4rem;
+    left: 1.4rem;
+    background: rgba(107, 0, 8, 0.95);
+    color: var(--dm-cream);
+    padding: 0.6rem 1.4rem;
+    border-radius: 999px;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+    box-shadow: 0 12px 24px rgba(18, 7, 7, 0.25);
+}
+
+@media (max-width: 991.98px) {
+    .about-copy {
+        padding: 1.8rem;
+    }
+    .about-collage-grid {
+        min-height: 420px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .about-us {
+        padding: 3.5rem 0;
+    }
+
+    .about-title {
+        padding: 0 1rem;
+        text-align: center;
+    }
+
+    .about-eyebrow {
+        text-align: center;
+        display: block;
+    }
+
+    .about-copy {
+        padding: 1.6rem;
+    }
+
+    .about-copy p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: #2d2426;
+    margin: 0;
+}
+
+    .about-collage-grid {
+        gap: 0.75rem;
+        min-height: 340px;
+    }
+
+    .about-lightbox-nav {
+        width: 25px;
+        height: 25px;
+    }
+
+    .about-collage-badge {
+        padding: 0.4rem 1rem;
+        font-size: 0.55rem;
+        left: 1rem;
+        bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-collage-grid {
+        min-height: 300px;
+        grid-auto-rows: 120px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .about-lightbox-image {
+        transition: none;
+        opacity: 1;
+        transform: none;
+    }
+}
