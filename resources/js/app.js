@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './navbar';
 import './effects';
 import './lightbox';
+import './cookie-banner';
 
 const backToTop = document.getElementById('back-to-top');
 

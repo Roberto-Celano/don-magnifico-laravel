@@ -52,8 +52,6 @@
       href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
       rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />   
     <link rel="preload" href="{{ asset('img/carosello/pedane.webp') }}" as="image">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @stack('style')
@@ -64,13 +62,11 @@
       @yield('content')
     </main>
     @include('components.footer')
+    @include('components.cookie-banner')
     <a href="#start" id="back-to-top" class="back-to-top" aria-label="Torna a inizio pagina">
       <i class="fas fa-chevron-up"></i>
     </a>
     @stack('script')
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"
-      defer></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
     <script>
       window.addEventListener('load', function () {
