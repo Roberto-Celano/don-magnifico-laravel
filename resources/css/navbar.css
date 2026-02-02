@@ -12,14 +12,14 @@
     background: linear-gradient(90deg, rgba(107, 0, 8, 0.98), rgba(107, 0, 8, 0.9));
     border-bottom: 1px solid rgba(231, 185, 40, 0.18);
     box-shadow: 0 12px 28px rgba(18, 7, 7, 0.25);
-    padding: 0.75rem 0;
+    padding: 0.75rem 0!important;
     transition: background-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
     z-index: 1000;
 }
 
 .dm-navbar.is-scrolled {
     background: rgba(78, 0, 6, 0.97);
-    padding: 0.5rem 0;
+    padding: 0.75rem 0!important;
     box-shadow: 0 16px 34px rgba(18, 7, 7, 0.32);
 }
 
@@ -41,8 +41,20 @@
 }
 
 .dm-link {
+    color: var(--dm-cream)!important;
+    font-weight: 400!important;
+    letter-spacing: 0.12em;
+    font-size: 0.92rem!important;
+    text-transform: uppercase;
+    padding: 0.4rem 0;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+} 
+.dm-link {
     color: var(--dm-cream);
-    font-weight: 600;
+    font-weight: 400;
     letter-spacing: 0.12em;
     font-size: 0.92rem;
     text-transform: uppercase;
@@ -52,7 +64,6 @@
     align-items: center;
     width: fit-content;
 }
-
 .dm-link::after {
     content: "";
     position: absolute;
@@ -66,12 +77,12 @@
 
 .dm-link:hover,
 .dm-link:focus {
-    color: var(--dm-gold);
+    color: var(--dm-gold)!important;
 }
 
 .dm-link:hover::after,
 .dm-link:focus::after {
-    width: 100%;
+    width: 100%!important;
 }
 
 .dm-socials {

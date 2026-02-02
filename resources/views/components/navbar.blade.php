@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark dm-navbar fixed-top" id="start">
   <div class="container">
-    <a class="navbar-brand d-flex align-items-center gap-3" href="/home" aria-label="Don Magnifico">
+    <a class="navbar-brand d-flex align-items-center gap-3" href="/" aria-label="Don Magnifico">
       <img
         class="logo dm-logo"
         src="img/logo/logoDonMagnifico.webp"

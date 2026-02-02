@@ -9,6 +9,7 @@
 @import './footer.css';
 @import './back-to-top.css';
 @import './cookie-banner.css';
+@import './legal.css';
 @import './effects.css';
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';

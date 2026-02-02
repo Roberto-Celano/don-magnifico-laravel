@@ -62,7 +62,7 @@
       @yield('content')
     </main>
     @include('components.footer')
-    @include('components.cookie-banner')
+    
     <a href="#start" id="back-to-top" class="back-to-top" aria-label="Torna a inizio pagina">
       <i class="fas fa-chevron-up"></i>
     </a>

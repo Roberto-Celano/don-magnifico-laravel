@@ -6,4 +6,4 @@
       @include('pages.partials.home.menu-section')
         @include('pages.partials.home.recensioni') 
         @include('pages.partials.home.contact') 
-  
+  @include('components.cookie-banner')

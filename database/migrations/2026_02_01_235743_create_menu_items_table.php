@@ -11,8 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('primi', function (Blueprint $table) {
+        Schema::create('menu_items', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->text('ingredients')->nullable();
+            $table->decimal('price', 8, 2);
+            $table->foreignId('category_id')
+                ->constrained('menu_categories')
+                ->cascadeOnDelete();
             $table->timestamps();
         });
     }
@@ -22,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('primi');
+        Schema::dropIfExists('menu_items');
     }
 };

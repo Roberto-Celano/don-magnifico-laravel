@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class MenuCategory extends Model
+{
+
+    protected $fillable = [
+        'name',
+        'position',
+    ];
+
+    public function menuItems()
+    {
+        return $this->hasMany(MenuItem::class);
+    }
+}

@@ -1326,3 +1326,4 @@
             </div>
         </div>
     </div>
+    @include('components.cookie-banner')

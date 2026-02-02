@@ -112,7 +112,7 @@
                 </div>
             </article>
 
-            <article class="review-card">
+            <article class="review-card d-none d-lg-block">
                 <div class="review-card-header">
                     <div class="review-avatar" aria-hidden="true">
                         <i class="fas fa-user-circle"></i>
@@ -135,7 +135,7 @@
         <div class="reviews-cta reveal reveal-delay-2">
       <a class="btn btn-hero-primary reviews-cta-link"
         href="https://www.google.com/search?client=ms-android-oppo-rvo3&sca_esv=317e6ae4902de9ac&sca_upv=1&cs=0&q=recensioni%20di%20don%20magnifico&ludocid=5311786868120427181&ibp=gwp%3B0%2C7&hl=it-IT&sa=X&ved=0CAYQ5foLahcKEwiA8sO38_OGAxUAAAAAHQAAAAAQDA&biw=360&bih=709&dpr=3#lkt=LocalPoiReviews"
-        target="_blank" rel="noopener noreferrer">Leggi tutte le recensioni su Google</a>
+        target="_blank" rel="noopener noreferrer">Leggi le recensioni su Google</a>
         </div>
     </div>
 </section>
