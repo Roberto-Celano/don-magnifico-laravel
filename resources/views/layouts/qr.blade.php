@@ -10,40 +10,41 @@
     <meta name="author" content="Roberto Celano">
     <meta name="robots" content="index, follow">
     <title>@yield('title') - Don Magnifico</title>
-    <link rel="icon" href={{ asset('img/favicon/favicon.ico') }} type="image/x-icon">
-    <link rel="icon" href={{ asset('img/favicon/favicon-16x16.png') }} sizes="16x16"
+    <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('img/favicon/favicon-16x16.png?v=1') }}" sizes="16x16"
       type="image/png">
-    <link rel="icon" href={{ asset('img/favicon/favicon-32x32.png') }} sizes="32x32"
+    <link rel="icon" href="{{ asset('img/favicon/favicon-32x32.png?v=1') }}" sizes="32x32"
       type="image/png">
-    <link rel="icon" href="img/favicon/favicon.ico" sizes="48x48"
+    <link rel="icon" href="{{ asset('img/favicon/favicon.ico?v=1') }}" sizes="48x48"
       type="image/x-icon">
-    <link rel="icon" href="img/favicon/favicon.ico" sizes="96x96"
+    <link rel="icon" href="{{ asset('img/favicon/favicon.ico?v=1') }}" sizes="96x96"
       type="image/x-icon">
     <link rel="apple-touch-icon" sizes="57x57"
-      href="img/favicon/apple-touch-icon.png">
+      href="{{ asset('img/favicon/apple-touch-icon.png?v=1') }}">
     <link rel="apple-touch-icon" sizes="60x60"
-      href="img/favicon/apple-touch-icon.png">
+      href="{{ asset('img/favicon/apple-touch-icon.png?v=1') }}">
     <link rel="apple-touch-icon" sizes="72x72"
-      href="img/favicon/apple-touch-icon.png">
+      href="{{ asset('img/favicon/apple-touch-icon.png?v=1') }}">
     <link rel="apple-touch-icon" sizes="76x76"
-      href="img/favicon/apple-touch-icon.png">
+      href="{{ asset('img/favicon/apple-touch-icon.png?v=1') }}">
     <link rel="apple-touch-icon" sizes="114x114"
-      href="img/favicon/apple-touch-icon.png">
+      href="{{ asset('img/favicon/apple-touch-icon.png?v=1') }}">
     <link rel="apple-touch-icon" sizes="120x120"
-      href="img/favicon/apple-touch-icon.png">
+      href="{{ asset('img/favicon/apple-touch-icon.png?v=1') }}">
     <link rel="apple-touch-icon" sizes="144x144"
-      href="img/favicon/apple-touch-icon.png">
+      href="{{ asset('img/favicon/apple-touch-icon.png?v=1') }}">
     <link rel="apple-touch-icon" sizes="152x152"
-      href="img/favicon/apple-touch-icon.png">
+      href="{{ asset('img/favicon/apple-touch-icon.png?v=1') }}">
     <link rel="apple-touch-icon" sizes="180x180"
-      href="img/favicon/apple-touch-icon.png">
+      href="{{ asset('img/favicon/apple-touch-icon.png?v=1') }}">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage"
-      content="img/favicon/mstile-150x150.png">
+      content="{{ asset('img/favicon/mstile-150x150.png?v=1') }}">
     <link rel="icon" sizes="192x192"
-      href="img/favicon/android-chrome-192x192.png">
+      href="{{ asset('img/favicon/android-chrome-192x192.png?v=1') }}">
     <link rel="icon" sizes="512x512"
-      href="img/favicon/android-chrome-512x512.png">
+      href="{{ asset('img/favicon/android-chrome-512x512.png?v=1') }}">
     <!-- Bootstrap CSS is bundled via Vite -->
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -77,3 +78,4 @@
     </script>
   </body>
 </html>
+

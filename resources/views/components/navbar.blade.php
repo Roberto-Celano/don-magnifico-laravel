@@ -21,13 +21,14 @@
           <a class="nav-link dm-link" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link dm-link" href="/#chi-siamo">Chi siamo</a>
+          <a class="nav-link dm-link" href="/#Chi_siamo">Chi siamo</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link dm-link" href="/menu">Menu</a>
+          <a class="nav-link dm-link" href="/menu">Menù</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link dm-link" href="/#contatti">Contatti</a>
+        <li class="nav-item">          <a class="nav-link dm-link" href="/menu-pranzo">Menù Pranzo</a>
+        </li>
+        <li class="nav-item">          <a class="nav-link dm-link" href="/#Contatti">Contatti</a>
         </li>
       </ul>
 

@@ -1,7 +1,6 @@
 @extends('layouts.public')
-@section('content')
 @section('title', 'Menù')
-
+@section('content')
 <section class="menu-page">
     <div class="container menu-page-header text-center">
         <span class="menu-eyebrow">Il nostro menù</span>

@@ -1,5 +1,6 @@
 <!-- Sezione Orari di Apertura e Contatti -->
-<section class="contact-section reveal" id="contatti" aria-labelledby="contact-title">
+
+<section class="contact-section reveal" id="Contatti" aria-labelledby="contact-title">
   <div class="container">
     <div class="contact-header text-center">
       <span class="contact-eyebrow">Contatti</span>

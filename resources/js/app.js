@@ -4,6 +4,7 @@ import './navbar';
 import './effects';
 import './lightbox';
 import './cookie-banner';
+import './reviews';
 
 const backToTop = document.getElementById('back-to-top');
 

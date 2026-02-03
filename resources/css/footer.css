@@ -86,8 +86,30 @@
     justify-content: space-between;
 }
 
+.footer-bottom-left {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.footer-cookie {
+    font-weight: 600;
+}
+
 .footer-dev {
     text-decoration: underline;
+}
+
+.footer-admin-lock {
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+    font-size: 0.75rem;
+}
+
+.footer-admin-lock:hover {
+    opacity: 1;
+    text-decoration: none;
 }
 
 @media (max-width: 767.98px) {
@@ -95,5 +117,12 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
+        gap: 0.5rem;
+    }
+
+    .footer-bottom-left {
+        justify-content: center;
+        width: 100%;
+        gap: 0.6rem;
     }
 }

@@ -1,5 +1,5 @@
 <!-- Sezione Chi Siamo -->
-<section class="about-us" id="chi-siamo">
+<section class="about-us" id="Chi_siamo">
     <div class="container">
         <div class="row align-items-stretch about-grid">
             <div class="col-12 col-lg-6">

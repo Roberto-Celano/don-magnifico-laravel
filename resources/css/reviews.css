@@ -136,7 +136,7 @@
     }
 
     .review-card {
-        padding: 2rem 1.6rem;
+        padding: 2.2rem 1.8rem;
     }
 
     .review-card-header {
@@ -149,16 +149,50 @@
     }
 
     .reviews-bento {
-        grid-template-columns: 1fr;
+        display: flex;
+        gap: 1rem;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding: 0;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .reviews-bento::-webkit-scrollbar {
+        display: none;
     }
 
     .review-card--featured {
-        grid-column: span 1;
-        grid-row: span 1;
+        grid-column: auto;
+        grid-row: auto;
     }
 
     .review-text {
-        -webkit-line-clamp: 8;
+        -webkit-line-clamp: unset;
+        display: block;
+        overflow: visible;
+    }
+
+    .review-card {
+        min-width: 100%;
+        scroll-snap-align: start;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .reviews-section .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .reviews-header,
+    .reviews-cta {
+        padding: 0 1.25rem;
+    }
+
+    .reviews-bento {
+        scroll-padding: 0;
     }
 }
 

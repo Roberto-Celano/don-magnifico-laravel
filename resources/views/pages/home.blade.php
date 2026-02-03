@@ -1,6 +1,6 @@
 @extends('layouts.public')
-@section('content')
 @section('title', 'Home')  
+@section('content')
       @include('pages.partials.home.hero')
       @include('pages.partials.home.chi-siamo')
       @include('pages.partials.home.menu-section')

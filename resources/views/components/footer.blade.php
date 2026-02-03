@@ -50,7 +50,10 @@
     <div class="footer-divider"></div>
 
     <div class="footer-bottom">
-      <span>Copyright &copy; <span id="currentYear"></span> Don Magnifico. Tutti i diritti riservati.</span>
+      <span class="footer-bottom-left">
+        <span class="footer-copyright">Copyright &copy; <span id="currentYear"></span> Don Magnifico. Tutti i diritti riservati.</span>
+        <a class="footer-link footer-cookie" href="#" data-cookie-preferences>Gestisci preferenze cookie</a>
+      </span>
       <span>Sviluppato da <a class="footer-link footer-dev"
           href="https://robertocelano.dev/" target="_blank" rel="noopener noreferrer">Roberto
           Celano</a></span>

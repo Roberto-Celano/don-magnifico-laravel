@@ -1,7 +1,6 @@
 @extends('layouts.qr')
-@section('content')
 @section('title', 'Menù')
-
+@section('content')
 <section class="menu-page">
     <div class="container menu-page-header text-center">
         <span class="menu-eyebrow">Il nostro menù</span>
@@ -26,14 +25,12 @@
         </div>
         <!--Antipasti-->
         <hr class="menu-divider my-5">
-
         <div class="container menu-content text-center">
             <div class="row justify-content-evenly">
                 <div class="col-12 col-lg-8 mb-3 menu-category-card">
                     <div class="col-8 mx-auto mb-4">
                         <h3 class="menu-section-title text-center">ANTIPASTI</h3>
                     </div>
-
                     @foreach ($menuCategories as $category)
                         @if ($category->name == 'Antipasti')
                             @foreach ($category->menuItems as $item)
@@ -85,7 +82,6 @@
                             @endforeach
                         @endif
                     @endforeach
-
                 </div>
             </div>
         </div>

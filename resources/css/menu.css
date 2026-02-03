@@ -1,10 +1,12 @@
 :root {
     --dm-shadow-soft: 0 18px 40px rgba(18, 7, 7, 0.12);
+    
 }
 
 .menu-section {
     padding: 4.5rem 0 5rem;
     background: #f8f9fa;
+    
 }
 
 .menu-header {
