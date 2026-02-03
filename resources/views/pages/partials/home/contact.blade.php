@@ -41,7 +41,7 @@
             href="https://www.google.com/maps/place/Don+Magnifico/@42.1100167,14.7087269,19z/data=!4m6!3m5!1s0x1330dc544f573531:0x49b7420374e71aad!8m2!3d42.1100475!4d14.7092788!16s%2Fg%2F11d_8zd6l7?authuser=0&entry=ttu"
             target="_blank" rel="noopener noreferrer">
             <img class="img-fluid contact-map"
-              src="{{ asset('img/map.png') }}"
+              src={{ asset('img/map.png') }}
               alt="Mappa per raggiungere il ristorante-pizzeria Don Magnifico">
           </a>
         </div>

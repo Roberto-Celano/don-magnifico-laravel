@@ -1,9 +1,9 @@
 <section class="hero" aria-labelledby="hero-title">
   <div class="hero-media">
     <picture>
-      <source media="(max-width: 767.98px)" srcset="{{ asset('img/hero/heromobile.webp') }}">
+      <source media="(max-width: 767.98px)" srcset={{ asset('img/hero/heromobile.webp') }}>
       <img
-        src="{{ asset('img/hero/hero.webp') }}"
+        src={{ asset('img/hero/hero.webp') }}
         alt="Terrazza del ristorante Don Magnifico con vista mare"
         loading="eager"
         decoding="async"

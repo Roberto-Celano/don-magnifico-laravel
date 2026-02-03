@@ -10,10 +10,10 @@
     <meta name="author" content="Roberto Celano">
     <meta name="robots" content="index, follow">
     <title>@yield('title') - Don Magnifico</title>
-    <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="img/favicon/favicon-16x16.png" sizes="16x16"
+    <link rel="icon" href={{ asset('img/favicon/favicon.ico') }} type="image/x-icon">
+    <link rel="icon" href={{ asset('img/favicon/favicon-16x16.png') }} sizes="16x16"
       type="image/png">
-    <link rel="icon" href="img/favicon/favicon-32x32.png" sizes="32x32"
+    <link rel="icon" href={{ asset('img/favicon/favicon-32x32.png') }} sizes="32x32"
       type="image/png">
     <link rel="icon" href="img/favicon/favicon.ico" sizes="48x48"
       type="image/x-icon">
@@ -57,11 +57,11 @@
     @stack('style')
   </head>
   <body>
-    @include('components.navbar')
+    @include('components.navbarqr')
     <main>
       @yield('content')
     </main>
-    @include('components.footer')
+    @include('components.footerqr')
     
     <a href="#start" id="back-to-top" class="back-to-top" aria-label="Torna a inizio pagina">
       <i class="fas fa-chevron-up"></i>

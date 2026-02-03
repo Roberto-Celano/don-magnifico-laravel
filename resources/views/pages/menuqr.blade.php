@@ -1,4 +1,4 @@
-@extends('layouts.public')
+@extends('layouts.qr')
 @section('content')
 @section('title', 'Menù')
 

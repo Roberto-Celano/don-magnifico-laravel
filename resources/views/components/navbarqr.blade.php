@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark dm-navbar fixed-top" id="start">
   <div class="container">
-    <a class="navbar-brand d-flex align-items-center gap-3" href="/" aria-label="Don Magnifico">
+    <a class="navbar-brand d-flex align-items-center gap-3" href="#" aria-label="Don Magnifico">
       <img
         class="logo dm-logo"
         src={{ asset('img/logo/logoDonMagnifico.webp') }}
@@ -16,22 +16,13 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav mx-auto align-items-lg-center gap-lg-4">
-        <li class="nav-item">
-          <a class="nav-link dm-link" href="/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link dm-link" href="/#chi-siamo">Chi siamo</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link dm-link" href="/menu">Menu</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link dm-link" href="/#contatti">Contatti</a>
-        </li>
+      <ul class="navbar-nav w-100 justify-content-center align-items-center">
+        <li class="nav-item mx-auto text-center">
+          <a class="nav-link dm-link" href="/">Visita il nostro sito web</a>
+        </li>        
       </ul>
 
-      <div class="dm-socials d-flex align-items-center mt-3 mt-lg-0 ms-lg-auto">
+      <div class="dm-socials d-flex align-items-center mt-3 mt-lg-0 ms-lg-5">
         <a class="dm-social" href="https://www.facebook.com/profile.php?id=61556653926794"
           target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
           <i class="fab fa-facebook-f"></i>

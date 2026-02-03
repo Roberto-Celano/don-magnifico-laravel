@@ -11,7 +11,7 @@
       <div class="col-12 col-md-6 col-lg-4 reveal reveal-delay-1">
         <article class="menu-card">
           <div class="menu-card-media">
-            <img src="{{ asset('img/card_piatti/antipasto.webp') }}"
+            <img src={{ asset('img/card_piatti/antipasto.webp') }}
               alt="Antipasto di tagliere di salumi e formaggi misti"
               loading="lazy">
             <span class="menu-card-tag">Antipasto</span>
@@ -28,7 +28,7 @@
       <div class="col-12 col-md-6 col-lg-4 reveal reveal-delay-2">
         <article class="menu-card">
           <div class="menu-card-media">
-            <img src="{{ asset('img/card_piatti/primo.webp') }}"
+            <img src={{ asset('img/card_piatti/primo.webp') }}
               alt="Calamarata pesto di zucchine, mazzancolle sgusciate e calamaretti"
               loading="lazy">
             <span class="menu-card-tag">Primo</span>
@@ -45,7 +45,7 @@
       <div class="col-12 col-md-6 col-lg-4 reveal reveal-delay-3">
         <article class="menu-card">
           <div class="menu-card-media">
-            <img src="{{ asset('img/card_piatti/secondo.webp') }}"
+            <img src={{ asset('img/card_piatti/secondo.webp') }}
               alt="Grigliata mista di pesce e crostacei locali"
               loading="lazy">
             <span class="menu-card-tag">Secondo</span>

@@ -38,17 +38,17 @@
             <div class="col-12 col-lg-6">
                 <div class="about-visual">
                     <div class="about-collage-grid">
-                        <img class="about-collage-item" src="{{ asset('img/carosello/pedane.webp') }}"
+                        <img class="about-collage-item" src={{ asset('img/carosello/pedane.webp') }}
                             alt="Terrazza panoramica del ristorante Don Magnifico" loading="lazy">
-                        <img class="about-collage-item" src="{{ asset('img/carosello/tavoloantipasto.webp') }}"
+                        <img class="about-collage-item" src={{ asset('img/carosello/tavoloantipasto.webp') }}
                             alt="Antipasto di mare del ristorante Don Magnifico" loading="lazy">
-                        <img class="about-collage-item" src="{{ asset('img/carosello/tiramisu.webp') }}"
+                        <img class="about-collage-item" src={{ asset('img/carosello/tiramisu.webp') }}
                             alt="Dessert del ristorante Don Magnifico" loading="lazy">
-                        <img class="about-collage-item" src="{{ asset('img/carosello/entrata.webp') }}"
+                        <img class="about-collage-item" src={{ asset('img/carosello/entrata.webp') }}
                             alt="Ingresso del ristorante Don Magnifico" loading="lazy">
-                        <img class="about-collage-item" src="{{ asset('img/carosello/facciata.webp') }}"
+                        <img class="about-collage-item" src={{ asset('img/carosello/facciata.webp') }}
                             alt="Facciata del ristorante Don Magnifico" loading="lazy">
-                        <img class="about-collage-item" src="{{ asset('img/carosello/tavolopesce.webp') }}"
+                        <img class="about-collage-item" src={{ asset('img/carosello/tavolopesce.webp') }}
                             alt="Tavolo con piatti di pesce del ristorante Don Magnifico" loading="lazy">
                         <div class="about-collage-badge">Dal 2014</div>
                     </div>

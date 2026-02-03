@@ -30,11 +30,12 @@ class MenuCategorySeeder extends Seeder
             'Birra alla Spina',
             'Birra in Bottiglia',
             'Digestivi',
-            'Vini Rossi',
-            'Vini Bianchi',
-            'Vini Rosati',
+            'Vini Pollutro',
+            'Vini Don Venanzio',
+            'Vini Others',
             'Aggiunte',
             'Coperto',
+            'Allergeni',
         ];
 
         // Inserire le categorie nel database con la posizione corretta
