@@ -1,3 +1,4 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
 /* ========================================
    DON MAGNIFICO - ADMIN & LOGIN STYLES
    Design moderno coerente con il sito
@@ -530,6 +531,7 @@
     display: flex;
     gap: 0.5rem;
     flex-wrap: nowrap;
+    justify-content: flex-end;
 }
 
 /* Testo bottoni nascosto su mobile */
@@ -581,14 +583,20 @@
     border-bottom: 2px solid var(--dm-burgundy);
     font-size: 0.9rem;
     letter-spacing: 0.03em;
+    white-space: nowrap;
 }
-
+/* Colonna Azioni - larghezza fissa e allineata a destra */
+.admin-table th:last-child,
+.admin-table td:last-child {
+    width: 180px;
+    min-width: 180px;
+    text-align: right;
+}
 .admin-table td {
     padding: 1rem 1.25rem;
     border-bottom: 1px solid #eee;
     vertical-align: middle;
 }
-
 .admin-table tbody tr {
     transition: background-color 0.2s ease;
 }
@@ -637,24 +645,6 @@
     font-size: 0.75rem;
 }
 
-/* ===== RESPONSIVE VISIBILITY ===== */
-.hide-on-mobile {
-    display: table;
-}
-
-.show-on-mobile {
-    display: none;
-}
-
-@media (max-width: 767.98px) {
-    .hide-on-mobile {
-        display: none !important;
-    }
-    
-    .show-on-mobile {
-        display: block !important;
-    }
-}
 
 /* ===== B&B PARTNER CARDS ===== */
 .beb-cards {
@@ -678,8 +668,12 @@
     box-shadow: var(--dm-shadow-soft);
     overflow: hidden;
     transition: var(--dm-transition);
+    margin-bottom: 0.8rem;
 }
 
+.beb-card:last-child {
+    margin-bottom: 0;
+}
 .beb-card:hover {
     box-shadow: var(--dm-shadow-strong);
     transform: translateY(-2px);
@@ -759,7 +753,200 @@
     justify-content: flex-end;
     border-top: 1px solid #eee;
 }
+/* ===== LUNCH MENU CARDS (Mobile) ===== */
+.lunch-cards {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
 
+.lunch-card {
+    background: white;
+    border-radius: var(--dm-radius-sm);
+    border: 1px solid #eee;
+    box-shadow: var(--dm-shadow-soft);
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.lunch-card:last-child {
+    margin-bottom: 0;
+}
+.lunch-card--inactive {
+    opacity: 0.7;
+    background: #f9f9f9;
+}
+
+.lunch-card-header {
+    background: linear-gradient(135deg, var(--dm-cream-soft) 0%, var(--dm-cream) 100%);
+    padding: 0.75rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.lunch-card-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    color: var(--dm-burgundy);
+}
+
+.lunch-card-price {
+    color: var(--dm-burgundy);
+    font-size: 1.1rem;
+}
+
+.lunch-card-body {
+    padding: 0.75rem 1rem;
+}
+
+.lunch-card-desc {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.lunch-card-actions {
+    background: #fafafa;
+    padding: 0.75rem 1rem;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    border-top: 1px solid #eee;
+}
+
+/* ===== CATEGORY CARDS (Mobile) ===== */
+.category-cards {
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.category-card {
+    background: white;
+    border-radius: var(--dm-radius-sm);
+    border: 1px solid #eee;
+    box-shadow: var(--dm-shadow-soft);
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.category-card:last-child {
+    margin-bottom: 0;
+}
+.category-card-header {
+    background: linear-gradient(135deg, var(--dm-cream-soft) 0%, var(--dm-cream) 100%);
+    padding: 0.75rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.category-card-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--dm-burgundy);
+}
+
+.category-card-body {
+    padding: 0.75rem 1rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.category-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.category-card-label {
+    font-size: 0.75rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.category-card-value {
+    font-size: 0.95rem;
+    color: var(--dm-ink);
+}
+
+.category-card-actions {
+    background: #fafafa;
+    padding: 0.75rem 1rem;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    border-top: 1px solid #eee;
+}
+
+/* ===== MENU ITEM CARDS (Mobile) ===== */
+.item-cards {
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.item-card {
+    background: white;
+    border-radius: var(--dm-radius-sm);
+    border: 1px solid #eee;
+    box-shadow: var(--dm-shadow-soft);
+    overflow: hidden;
+    margin-bottom: 10px;
+    margin-bottom: 1rem;
+}
+
+.item-card:last-child {
+    margin-bottom: 0;
+}
+.item-card-header {
+    background: linear-gradient(135deg, var(--dm-cream-soft) 0%, var(--dm-cream) 100%);
+    padding: 0.75rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.item-card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--dm-burgundy);
+}
+
+.item-card-price {
+    color: var(--dm-burgundy);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.item-card-body {
+    padding: 0.75rem 1rem;
+}
+
+.item-card-ingredients {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.item-card-actions {
+    background: #fafafa;
+    padding: 0.75rem 1rem;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    border-top: 1px solid #eee;
+}
 /* ===== CHECKBOX ===== */
 .admin-checkbox {
     display: inline-flex;
@@ -1003,22 +1190,37 @@
         font-size: 1.15rem;
     }
     
+    /* Tabelle responsive - evita overflow su mobile */
     .admin-table {
         font-size: 0.85rem;
+        table-layout: fixed;
+        width: 100%;
     }
     
     .admin-table th,
     .admin-table td {
         padding: 0.75rem 0.6rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        white-space: normal;
     }
     
+    .admin-table th:last-child,
+    .admin-table td:last-child {
+        width: 100px;
+        min-width: 100px;
+        
+    }
     .admin-actions {
         flex-direction: column;
+        gap: 0.4rem;
+        align-items: flex-end;
     }
     
     .admin-btn--danger,
     .admin-btn--secondary {
-        width: 100%;
+        width: 50%;
     }
     
     .admin-modal {
@@ -1094,10 +1296,25 @@
         margin-bottom: 1.25rem;
     }
     
+    /* Tabelle ancora più strette - word-break più aggressivo */
     .admin-table th,
     .admin-table td {
         padding: 0.6rem 0.4rem;
         font-size: 0.8rem;
+        hyphens: auto;
+        -webkit-hyphens: auto;
+    }
+    
+    .admin-table th:last-child,
+    .admin-table td:last-child {
+        width: 80px;
+        min-width: 80px;
+    }
+    
+    /* Limita larghezza celle descrizione/nome */
+    .admin-table td:first-child,
+    .admin-table td:nth-child(2) {
+        max-width: 120px;
     }
 }
 

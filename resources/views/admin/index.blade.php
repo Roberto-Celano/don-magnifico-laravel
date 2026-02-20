@@ -122,9 +122,9 @@
                 </button>
             </form>
 
-            <!-- Tabella Categorie -->
+            <!-- Tabella Categorie (Desktop) -->
             @if ($categories->count() > 0)
-                <table class="admin-table">
+                <table class="admin-table d-none d-md-table">
                     <thead>
                         <tr>
                             <th>Nome Categoria</th>
@@ -157,6 +157,36 @@
                         @endforeach
                     </tbody>
                 </table>
+
+                <!-- Card Categorie (Mobile) -->
+                <div class="category-cards d-flex flex-column d-md-none">
+                    @foreach ($categories as $category)
+                        <div class="category-card">
+                            <div class="category-card-header">
+                                <span class="category-card-title">{{ $category->name }}</span>
+                                <span class="admin-badge admin-badge--position">{{ $category->position }}</span>
+                            </div>
+                            <div class="category-card-body">
+                                <div class="category-card-info">
+                                    <span class="category-card-label">Piatti</span>
+                                    <span class="category-card-value">{{ $category->menuItems->count() }} piatti</span>
+                                </div>
+                            </div>
+                            <div class="category-card-actions">
+                                <button type="button" onclick="editCategory({{ $category->id }}, '{{ addslashes($category->name) }}', {{ $category->position }})" class="admin-btn admin-btn--secondary admin-btn--small">
+                                    <i class="fas fa-edit"></i> Modifica
+                                </button>
+                                <form method="POST" action="{{ route('admin.categories.destroy', $category) }}" style="display: inline;" onsubmit="return confirmDelete(this, 'Eliminare la categoria e tutti i suoi piatti?');">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="admin-btn admin-btn--danger admin-btn--small">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
             @else
                 <div class="admin-empty">
                     <div class="admin-empty-icon"><i class="fas fa-inbox"></i></div>
@@ -210,7 +240,9 @@
                         <h3 class="admin-category-title">
                             <i class="fas fa-angle-right"></i> {{ $category->name }}
                         </h3>
-                        <table class="admin-table">
+                        
+                        <!-- Tabella Piatti (Desktop) -->
+                        <table class="admin-table d-none d-md-table">
                             <thead>
                                 <tr>
                                     <th>Piatto</th>
@@ -243,6 +275,35 @@
                                 @endforeach
                             </tbody>
                         </table>
+
+                        <!-- Card Piatti (Mobile) -->
+                        <div class="item-cards show-on-mobile d-none d-md-table mb-2">
+                            @foreach ($category->menuItems->sortBy('price') as $item)
+                                <div class="item-card">
+                                    <div class="item-card-header">
+                                        <span class="item-card-title">{{ $item->name }}</span>
+                                        <span class="item-card-price">€ {{ number_format($item->price, 2, ',', '.') }}</span>
+                                    </div>
+                                    @if ($item->ingredients)
+                                        <div class="item-card-body">
+                                            <p class="item-card-ingredients">{{ $item->ingredients }}</p>
+                                        </div>
+                                    @endif
+                                    <div class="item-card-actions">
+                                        <button type="button" onclick="editItem({{ $item->id }}, '{{ addslashes($item->name) }}', `{{ addslashes($item->ingredients ?? '') }}`, {{ $item->price }}, {{ $item->category_id }})" class="admin-btn admin-btn--secondary admin-btn--small">
+                                            <i class="fas fa-edit"></i> Modifica
+                                        </button>
+                                        <form method="POST" action="{{ route('admin.items.destroy', $item) }}" style="display: inline;" onsubmit="return confirmDelete(this, 'Eliminare questo piatto?');">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="admin-btn admin-btn--danger admin-btn--small">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
                     @endif
                 @endforeach
             @else
@@ -300,9 +361,9 @@
                 </button>
             </form>
 
-            <!-- Tabella Menu Pranzo -->
+            <!-- Tabella Menu Pranzo (Desktop) -->
             @if ($lunchMenus->count() > 0)
-                <table class="admin-table">
+                <table class="admin-table d-none d-md-table">
                     <thead>
                         <tr>
                             <th>Nome</th>
@@ -343,6 +404,41 @@
                         @endforeach
                     </tbody>
                 </table>
+                <!-- Card Menu Pranzo (Mobile) -->
+                <div class="lunch-cards d-flex flex-column d-md-none">
+                    @foreach ($lunchMenus as $lunchMenu)
+                        <div class="lunch-card {{ $lunchMenu->is_active ? '' : 'lunch-card--inactive' }}">
+                            <div class="lunch-card-header">
+                                <div class="lunch-card-title">
+                                    <strong>{{ $lunchMenu->name }}</strong>
+                                    @if ($lunchMenu->is_active)
+                                        <span class="admin-badge admin-badge--success" title="Attivo"><i class="fas fa-check"></i></span>
+                                    @else
+                                        <span class="admin-badge admin-badge--danger" title="Disattivo"><i class="fas fa-times"></i></span>
+                                    @endif
+                                </div>
+                                <strong class="lunch-card-price">€ {{ number_format($lunchMenu->price, 2, ',', '.') }}</strong>
+                            </div>
+                            @if ($lunchMenu->description)
+                                <div class="lunch-card-body">
+                                    <p class="lunch-card-desc">{{ Str::limit($lunchMenu->description, 80) }}</p>
+                                </div>
+                            @endif
+                            <div class="lunch-card-actions">
+                                <button type="button" onclick="editLunchMenu({{ $lunchMenu->id }}, '{{ addslashes($lunchMenu->name) }}', '{{ addslashes($lunchMenu->description ?? '') }}', `{{ addslashes($lunchMenu->courses) }}`, {{ $lunchMenu->price }}, {{ $lunchMenu->sort_order }}, {{ $lunchMenu->is_active ? 'true' : 'false' }})" class="admin-btn admin-btn--secondary admin-btn--small">
+                                    <i class="fas fa-edit"></i> Modifica
+                                </button>
+                                <form method="POST" action="{{ route('admin.lunch-menus.destroy', $lunchMenu) }}" style="display: inline;" onsubmit="return confirmDelete(this, 'Eliminare questo menu pranzo?');">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="admin-btn admin-btn--danger admin-btn--small">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
             @else
                 <div class="admin-empty">
                     <div class="admin-empty-icon"><i class="fas fa-sun"></i></div>
